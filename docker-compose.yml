@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.client
     volumes:
-      - ./usr/client:/app/
+      - ./client:/usr/src/app
     command: "yarn start"
     ports:
       - "3000:3000"
@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: Dockerfile.server
     volumes:
-      - ./usr/server:/app
+      - ./server:/usr/src/app
     command: "yarn start"
     ports:
       - "9999:9999"

@@ -6,6 +6,4 @@ COPY client/package.json .
 COPY client/yarn.lock .
 RUN yarn install
 
-COPY ./client .
-
 EXPOSE 3000
