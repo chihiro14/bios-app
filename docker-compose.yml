@@ -1,11 +1,24 @@
 version: '3'
 services:
   web:
+    image: bios-app_web
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.client
     volumes:
-      - ./:/usr/src/app
-    command: sh -c "cd client && yarn start"
+      - ./usr/client:/app/
+    command: "yarn start"
     ports:
       - "3000:3000"
+    tty: true
+  
+  server:
+    image: bios-app_server
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    volumes:
+      - ./usr/server:/app
+    command: "yarn start"
+    ports:
+      - "9999:9999"

@@ -1,0 +1,11 @@
+FROM node:12.19.0
+
+WORKDIR /usr/src/app
+
+COPY server/package.json .
+COPY server/yarn.lock .
+RUN yarn install
+
+COPY ./server .
+
+EXPOSE 9999
