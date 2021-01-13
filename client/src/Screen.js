@@ -16,7 +16,7 @@ function Screen() {
     );
 }
 
-const Main = styled.div`
+const Main = styled.main`
     position: relative;
     display: flex;
     width: calc(100% - 20px);

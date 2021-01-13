@@ -39,7 +39,7 @@ function ScreenMain() {
                         <label>Select Language :</label>
                     </h1>
                     <span>
-                        <select>
+                        <select className="bios-selectbox">
                             <option value="en">English</option>
                             <option value="eo">Esperanto</option>
                             <option value="ja">日本語</option>
@@ -68,6 +68,25 @@ const Section = styled.section`
     height: calc(100% - 3rem);
     overflow-y: auto;
     border: 2px solid #110088;
+
+    select.bios-selectbox {
+        background-color: rgba(0,0,0,0);
+        border: 1px solid #5A525A;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        color: #5a525a;
+        margin-right: 20%;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    select.bios-selectbox:focus {
+        background-color: rgba(255,255,255,0.2);
+        border-right-width: 5px;
+        border-right-style: double;
+        border-left-width: 5px;
+        border-left-width: double;
+        outline: none;
+    }
 `;
 
 export default ScreenMain;
