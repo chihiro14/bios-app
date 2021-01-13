@@ -10,17 +10,18 @@ Dockerで環境構築するにあたって、
 この辺が勉強できそうかなと。
 
 
-# 起動
-・imageの構築
-docker-compose build　
+# imageの構築
+`docker-compose build`
 
-・imageの構築・コンテナの構築・起動
-docker-compose up
+# コンテナの構築・起動
+`docker-compose up`
 -dでバックグランドで起動
 
-・停止
-Ctrl+C もしくはdocker-compose stop（バックグランドで起動している場合）
+# コンテナの停止
+`Ctrl+C`
+ もしくは
+ `docker-compose stop （バックグランドで起動している場合）`
 
-・再開（コンテナの起動のみ）
-docker-compose start
+# コンテナの再開（コンテナの起動のみ）
+`docker-compose start`
 
